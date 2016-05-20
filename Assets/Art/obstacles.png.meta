@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: 8e9d903b73f674993bf9a904a550dba2
-timeCreated: 1463764314
+timeCreated: 1463766387
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: obstacles_0
+    21300002: obstacles_1
+    21300004: obstacles_2
+    21300006: obstacles_3
+    21300008: obstacles_4
+    21300010: obstacles_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +36,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,19 +44,158 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 254
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: obstacles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 254
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25.5, y: 63.5}
+        - {x: 20.5, y: 57.5}
+        - {x: 21.5, y: 48.5}
+        - {x: 16.5, y: 42.5}
+        - {x: 20.5, y: 47.5}
+        - {x: 20.5, y: 51.5}
+        - {x: 15.5, y: 80.5}
+        - {x: -54.5, y: 80.5}
+        - {x: -71.5, y: 54.5}
+        - {x: -71.5, y: -5.5}
+        - {x: -57.5, y: -76.5}
+        - {x: 16.5, y: -76.5}
+        - {x: 53.5, y: -30.5}
+        - {x: 53.5, y: 59.5}
+        - {x: 47.5, y: 76.5}
+      tessellationDetail: 0
+    - name: obstacles_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 0
+        width: 254
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.029999, y: 50.5}
+        - {x: -63.03, y: 30.5}
+        - {x: -63.03, y: -38.5}
+        - {x: -39.03, y: -50.5}
+        - {x: 44.97, y: -50.5}
+        - {x: 68.97, y: -32.5}
+        - {x: 68.97, y: 34.5}
+        - {x: 58.97, y: 50.5}
+      tessellationDetail: 0
+    - name: obstacles_2
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 0
+        width: 254
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0.94000244, y: 80.5}
+        - {x: -101.06, y: 41.5}
+        - {x: -101.06, y: -64.5}
+        - {x: -54.059998, y: -80.5}
+        - {x: 78.94, y: -80.5}
+        - {x: 103.94, y: -55.5}
+        - {x: 103.94, y: 34.5}
+        - {x: 74.94, y: 80.5}
+      tessellationDetail: 0
+    - name: obstacles_3
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 0
+        width: 254
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102.089966, y: 16.5}
+        - {x: -102.089966, y: -36.5}
+        - {x: -96.089966, y: -36.5}
+        - {x: -95.089966, y: -29.5}
+        - {x: -95.089966, y: 9.5}
+        - {x: -99.089966, y: 16.5}
+      - - {x: -19.089966, y: 42.5}
+        - {x: -30.089966, y: 24.5}
+        - {x: -32.089966, y: 16.5}
+        - {x: -32.089966, y: 2.5}
+        - {x: -7.089966, y: -30.5}
+        - {x: -4.089966, y: -31.5}
+        - {x: 20.910034, y: -31.5}
+        - {x: 38.910034, y: -16.5}
+        - {x: 38.910034, y: 6.5}
+        - {x: 28.910034, y: 42.5}
+      tessellationDetail: 0
+    - name: obstacles_4
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 0
+        width: 254
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48.119995, y: -71.5}
+        - {x: 50.880005, y: -71.5}
+        - {x: 103.880005, y: 15.5}
+        - {x: 103.880005, y: 51.5}
+        - {x: 93.880005, y: 80.5}
+        - {x: -79.119995, y: 80.5}
+        - {x: -79.119995, y: -36.5}
+      - - {x: -25.119995, y: 1.5}
+        - {x: -25.119995, y: 0.5}
+        - {x: -23.119995, y: 1.5}
+        - {x: -22.119995, y: 5.5}
+        - {x: -22.119995, y: -3.5}
+        - {x: -21.119995, y: -2.5}
+      tessellationDetail: 0
+    - name: obstacles_5
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 0
+        width: 254
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -98.14996, y: 47.5}
+        - {x: -102.14996, y: 47.5}
+        - {x: -102.14996, y: 32.5}
+        - {x: -98.14996, y: 33.5}
+        - {x: -94.14996, y: 35.5}
+        - {x: -93.14996, y: 38.5}
+        - {x: -93.14996, y: 43.5}
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
