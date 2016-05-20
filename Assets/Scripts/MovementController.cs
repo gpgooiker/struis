@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class MovementController : MonoBehaviour {
-	// Attach to a player object
+	// Attach to a world object
 
 	// Use this for initialization
 	void Start () {
@@ -10,12 +10,5 @@ public class MovementController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
-			if (Input.mousePosition.x < 0.5 * Screen.width) {
-				Debug.Log ("Hit left!");
-			} else {
-				Debug.Log ("Hit right!");
-			}
-		}
 	}
 }
