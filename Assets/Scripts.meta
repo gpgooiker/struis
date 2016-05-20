@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< 8291c58059546d2038ad1ba3631fe13058e8de54
 guid: d2e1a999cbc7ecf43821acc963d13382
 folderAsset: yes
 timeCreated: 1463765008
+=======
+guid: 0de28373a18794c3e937faa7811c0aad
+folderAsset: yes
+timeCreated: 1463764976
+>>>>>>> Click the left or right half of the screen to hit left or right
 licenseType: Free
 DefaultImporter:
   userData: 
