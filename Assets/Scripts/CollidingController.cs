@@ -5,6 +5,8 @@ using System.Collections;
 
 public class CollidingController : MonoBehaviour
 {
+	public int Score = 0;
+
 	private GameButtonController gameButtonController;
 	private int health = 90;
 	private const int DAMAGE_VALUE = 30;
@@ -13,7 +15,7 @@ public class CollidingController : MonoBehaviour
 	{
 		gameButtonController = gameObject.GetComponent<GameButtonController> ();
 	}
-	
+
 	void Update ()
 	{
 	
@@ -41,15 +43,17 @@ public class CollidingController : MonoBehaviour
 	{
 		//Check the provided Collider2D parameter other to see if it is tagged "PickUp", if it is...
 		if (other.gameObject.CompareTag ("Enemy")) {
-			if (health <= 0) {
-				Destroy (this.gameObject);
-			} else {
-				if (!gameButtonController.IsHittingLeft || !gameButtonController.IsHittingRight) {
-					// You're hit and you didn't defend yourself!
-					health -= DAMAGE_VALUE;
-					StartCoroutine (Blink ());
-					print (health);
+			if (!gameButtonController.IsHitting) {
+				if (health <= 0) {
+					Destroy (this.gameObject);
 				}
+
+				// You're hit and you didn't defend yourself!
+				health -= DAMAGE_VALUE;
+				StartCoroutine (Blink ());
+				print (health);
+			} else {
+				Score++;
 			}
 		}
 	}

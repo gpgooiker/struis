@@ -4,8 +4,7 @@ using System;
 
 public class GameButtonController : MonoBehaviour {
 
-	public bool IsHittingLeft;
-	public bool IsHittingRight;
+	public bool IsHitting;
 
 	// Use this for initialization
 	void Start () {
@@ -15,23 +14,18 @@ public class GameButtonController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown (0)) {
-			if (Input.mousePosition.x < 0.5 * Screen.width) {
-				IsHittingLeft = true;
-			} else {
-				IsHittingRight = true;
-			}
+//			if (Input.mousePosition.x < 0.5 * Screen.width) {
+//				IsHittingLeft = true;
+//			} else {
+//				IsHittingRight = true;
+//			}
+			IsHitting = true;
 			StartCoroutine (stopHitting ());
 		}
 	}
-
-	public void OnPlayerClickLeft(){
-		IsHittingLeft = true;
-
-		StartCoroutine (stopHitting ());
-	}
-
+		
 	public void OnPlayerClickRight(){
-		IsHittingRight = true;
+		IsHitting = true;
 
 		StartCoroutine (stopHitting ());
 	}
@@ -40,9 +34,8 @@ public class GameButtonController : MonoBehaviour {
 	// give back control again and let Unity continue to the next frame
 	private IEnumerator stopHitting ()
 	{
-		yield return new WaitForSeconds (02f);
+		yield return new WaitForSeconds (1.0f);
 
-		IsHittingLeft = false;
-		IsHittingRight = false;
+		IsHitting = false;
 	}
 }
