@@ -7,29 +7,41 @@ public class Spawn : MonoBehaviour
 	private int minHorizontal = -4;
 	private int maxHorizontal = 4;
 	private GameObject cactus;
-
-
-	IEnumerator SeedRandom ()
-	{
-		yield return new WaitForSeconds (Random.Range (0, 100));
-	}
-
-	void SpawnObstacle ()
-	{
-		cactus = Instantiate (cactusPrefab) as GameObject;
-		cactus.transform.position = new Vector3 (Random.Range (minHorizontal, maxHorizontal), 14.63f, 0);
-		//make child of plane or spawn empty
-	}
+	private bool justSpawned;
+	private GameObject worldObject;
 
 	// Use this for initialization
 	void Start ()
 	{
+		justSpawned = false;
+		worldObject = GameObject.Find ("Ground");
+
 	}
 
 	// Update is called once per frame
 	void Update ()
 	{
-		StartCoroutine (SeedRandom ());
 		SpawnObstacle ();
+	}
+
+	void SpawnObstacle ()
+	{
+		if (!justSpawned) {
+			cactus = Instantiate (cactusPrefab) as GameObject;
+			cactus.transform.position = new Vector3 (Random.Range (minHorizontal, maxHorizontal), 14.63f, 0);
+			cactus.transform.parent = worldObject.transform;
+			justSpawned = true;
+
+			// TODO: make child of plane 
+
+			StartCoroutine (SeedRandom ());
+		}
+	}
+
+	IEnumerator SeedRandom ()
+	{
+		yield return new WaitForSeconds (Random.Range (0.2f, 0.6f));
+
+		justSpawned = false;
 	}
 }

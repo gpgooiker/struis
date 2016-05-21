@@ -40,7 +40,7 @@ public class GameButtonController : MonoBehaviour {
 	// give back control again and let Unity continue to the next frame
 	private IEnumerator stopHitting ()
 	{
-		yield return new WaitForSeconds (0.4f);
+		yield return new WaitForSeconds (02f);
 
 		IsHittingLeft = false;
 		IsHittingRight = false;

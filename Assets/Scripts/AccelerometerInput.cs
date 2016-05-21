@@ -21,7 +21,6 @@ public class AccelerometerInput : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-
 		Quaternion referenceRotation = Quaternion.identity;
 		Quaternion deviceRotation = DeviceRotation.Get();
 		Quaternion eliminationOfXY = Quaternion.Inverse(
@@ -33,7 +32,7 @@ public class AccelerometerInput : MonoBehaviour
 
 		Debug.Log ("Angle around X" + angleAroundX);
 
-		movementController.WorldSpeed = Sensibility * angleAroundX;
+		//movementController.WorldSpeed = Sensibility * angleAroundX;
 
 	}
 }
