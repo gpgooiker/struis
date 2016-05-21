@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Specialized;
 
 public class AccelerometerInput : MonoBehaviour
 {
@@ -20,8 +21,17 @@ public class AccelerometerInput : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		angleAroundX = Input.gyro.attitude.x;
-		Debug.Log (angleAroundX);
+
+		Quaternion referenceRotation = Quaternion.identity;
+		Quaternion deviceRotation = DeviceRotation.Get();
+		Quaternion eliminationOfXY = Quaternion.Inverse(
+			Quaternion.FromToRotation(referenceRotation * Vector3.forward, 
+				deviceRotation * Vector3.forward)
+		);
+		Quaternion rotationZ = eliminationOfXY * deviceRotation;
+		angleAroundX = rotationZ.eulerAngles.z;
+
+		Debug.Log ("Angle around X" + angleAroundX);
 
 		movementController.WorldSpeed = Sensibility * angleAroundX;
 

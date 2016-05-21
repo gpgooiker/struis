@@ -4,7 +4,7 @@ using System.Collections;
 public class MovementController : MonoBehaviour {
 	// Attach to a world object
 
-	public float WorldSpeed = 0.0f;
+	public float WorldSpeed;
 
 	private Transform worldTransform;
 	private float deltaY;
@@ -17,7 +17,10 @@ public class MovementController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		deltaY = worldTransform.position.y + WorldSpeed;
+		Debug.Log ("DeltaY" + deltaY);
+	
 		newPos = new Vector3(worldTransform.position.x, deltaY, worldTransform.position.z);
 		worldTransform.position = newPos;
 
