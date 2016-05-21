@@ -2,17 +2,20 @@
 using System.Collections;
 using System;
 
-public class GameButtonController : MonoBehaviour {
+public class GameButtonController : MonoBehaviour
+{
 
 	public bool IsHitting;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		if (Input.GetMouseButtonDown (0)) {
 //			if (Input.mousePosition.x < 0.5 * Screen.width) {
 //				IsHittingLeft = true;
@@ -23,14 +26,15 @@ public class GameButtonController : MonoBehaviour {
 			StartCoroutine (stopHitting ());
 		}
 	}
-		
-	public void OnPlayerClickRight(){
+
+	public void OnPlayerClickRight ()
+	{
 		IsHitting = true;
 
 		StartCoroutine (stopHitting ());
 	}
 
-	// Coroutines use IEnumerators to do 'async' work. On the 'yield' keyword, coroutines 
+	// Coroutines use IEnumerators to do 'async' work. On the 'yield' keyword, coroutines
 	// give back control again and let Unity continue to the next frame
 	private IEnumerator stopHitting ()
 	{

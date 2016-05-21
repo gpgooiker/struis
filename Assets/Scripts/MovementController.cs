@@ -24,10 +24,16 @@ public class MovementController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		
 		float rotation = Input.GetAxis ("Horizontal") * turnSpeed;
+		//float rotationX = DeviceRotation.WorldRotationAngleX ();
+		//float rotationY = DeviceRotation.WorldRotationAngleY ();
 
-		// TODO: extract this function and call from a script that detects gyro
 		worldTransform.RotateAround (playerLocation, Vector3.forward, rotation);
+		// TODO: extract this function and call from a script that detects gyro
+		//worldTransform.RotateAround (playerLocation, Vector3.right, rotationX);
+		//worldTransform.RotateAround (playerLocation, Vector3.up, rotationY);
+
 
 
 		deltaY = worldTransform.position.y + WorldSpeed;
@@ -35,7 +41,6 @@ public class MovementController : MonoBehaviour
 	
 		newPos = new Vector3 (worldTransform.position.x, deltaY, worldTransform.position.z);
 		worldTransform.position = newPos;
-
 
 	}
 		

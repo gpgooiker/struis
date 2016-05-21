@@ -21,14 +21,8 @@ public class AccelerometerInput : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		Quaternion referenceRotation = Quaternion.identity;
-		Quaternion deviceRotation = DeviceRotation.Get();
-		Quaternion eliminationOfXY = Quaternion.Inverse(
-			Quaternion.FromToRotation(referenceRotation * Vector3.forward, 
-				deviceRotation * Vector3.forward)
-		);
-		Quaternion rotationZ = eliminationOfXY * deviceRotation;
-		angleAroundX = rotationZ.eulerAngles.z;
+
+		angleAroundX = DeviceRotation.StruisSpeedAngle();
 
 		Debug.Log ("Angle around X" + angleAroundX);
 
