@@ -1,5 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+<<<<<<< 08034a23aef0f24fa2b41b0dbd809ec05d386857
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AccelerometerInput.cs">
     <Files>
       <File FileName="Assets/Scripts/GameButtonController.cs" Line="32" Column="34" />
@@ -8,6 +9,15 @@
       <File FileName="Assets/Scripts/MovementController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/CollidingController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/AccelerometerInput.cs" Line="1" Column="1" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CollidingController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/MovementController.cs" Line="4" Column="48" />
+      <File FileName="Assets/Scripts/CollidingController.cs" Line="40" Column="42" />
+      <File FileName="Assets/Scripts/AccelerometerInput.cs" Line="26" Column="3" />
+      <File FileName="Assets/Scripts/GameButtonController.cs" Line="43" Column="40" />
+      <File FileName="Assets/Scripts/Spawn.cs" Line="11" Column="2" />
+>>>>>>> Add logic for hitting
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
