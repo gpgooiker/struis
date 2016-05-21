@@ -25,6 +25,8 @@ public class MovementController : MonoBehaviour
 	void Update ()
 	{
 		float rotation = Input.GetAxis ("Horizontal") * turnSpeed;
+
+		// TODO: extract this function and call from a script that detects gyro
 		worldTransform.RotateAround (playerLocation, Vector3.forward, rotation);
 
 
