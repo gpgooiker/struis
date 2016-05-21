@@ -4,20 +4,8 @@ using System;
 
 public class GameButtonController : MonoBehaviour {
 
-
-	public class MyLogHandler : ILogHandler
-	{
-		public void LogFormat (LogType logType, UnityEngine.Object context, string format, params object[] args)
-		{
-			Debug.logger.logHandler.LogFormat (logType, context, format, args);
-		}
-
-		public void LogException (Exception exception, UnityEngine.Object context)
-		{
-			Debug.logger.LogException (exception, context);
-		}
-	}
-
+	public bool IsHittingLeft;
+	public bool IsHittingRight;
 
 	// Use this for initialization
 	void Start () {
@@ -26,18 +14,35 @@ public class GameButtonController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if (Input.GetMouseButtonDown (0)) {
+			if (Input.mousePosition.x < 0.5 * Screen.width) {
+				IsHittingLeft = true;
+			} else {
+				IsHittingRight = true;
+			}
+			StartCoroutine (stopHitting ());
+		}
 	}
 
 	public void OnPlayerClickLeft(){
-		Logger myLogger = new Logger(new MyLogHandler());
+		IsHittingLeft = true;
 
-		myLogger.Log("Struis Ops", "You clicked left!");
+		StartCoroutine (stopHitting ());
 	}
 
 	public void OnPlayerClickRight(){
-		Logger myLogger = new Logger(new MyLogHandler());
+		IsHittingRight = true;
 
-		myLogger.Log("Struis Ops", "You clicked right!");
+		StartCoroutine (stopHitting ());
+	}
+
+	// Coroutines use IEnumerators to do 'async' work. On the 'yield' keyword, coroutines 
+	// give back control again and let Unity continue to the next frame
+	private IEnumerator stopHitting ()
+	{
+		yield return new WaitForSeconds (0.4f);
+
+		IsHittingLeft = false;
+		IsHittingRight = false;
 	}
 }

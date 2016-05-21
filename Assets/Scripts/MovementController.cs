@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof(AccelerometerInput))]
+
+
 public class MovementController : MonoBehaviour {
 	// Attach to a world object
 
